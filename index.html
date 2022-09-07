@@ -11,9 +11,9 @@
     <div class="header">
         <ul class="options">
             <li><a class="section-select" href="#">Home</a></li>
-            <li><a class="section-select">About</a></li>
-            <li><a class="section-select">Projects</a></li>
-            <li><a class="section-select">Contact</a></li>
+            <li><a class="section-select" href="#About">About</a></li>
+            <li><a class="section-select" href="#Projects">Projects</a></li>
+            <li><a class="section-select" href="#Contact">Contact</a></li>
         </ul>
     </div>
     <div class="intro">
@@ -28,7 +28,7 @@
                 <a href="https://github.com/evangoldsmith" target=”_blank” class="ball">
                     <img src="images/github-icon.svg" alt="Github image">
                 </a>
-                <a href="#" class="ball">
+                <a href="mailto:evangoldsmith@knights.ucf.edu" class="ball">
                     <img src="./images/mail-icon.svg" alt="Mail icon">
                 </a>
             </div>
@@ -36,7 +36,7 @@
         <img id="photo" src="/images/Evan54.jpg"
             alt="Photo of self" width="390" height="480">
     </div>
-    <div class="section">
+    <div class="section" id="About">
         <h1 id="section-title">About</h1>
         <div class="content">
             <div class="info">
@@ -53,7 +53,7 @@
         </div>
         
     </div>
-    <div class="section">
+    <div class="section" id="Projects">
         <h1 id="section-title">Projects</h1>
         <div class="card-container">
             <div class="card">
@@ -115,11 +115,27 @@
             </div>
         </div>
     </div>
-    <div class="section">
+    <div class="section" id="Contact">
         <h1 id="section-title">Contact</h1>
+        <form action="mailto:evangoldsmith@knights.ucf.edu" method="get" enctype="text/plain">
+            <div id="contact-info">
+                <input type="text" name="name" id="name" placeholder="Your Name" />
+                <input type="text" name="email" id="email" placeholder="Email Address"/>
+            </div>
+            <div id="contact-message">
+                <textarea name="comments" rows="12" cols="35" placeholder="Your Message"></textarea>
+            </div>
+            <div id="contact-submit">
+                <input id="Clear" type="reset" name="reset" value="Clear Form" />
+                <input id="Send" type="submit" name="submit" value="Send" />
+            </div>
+        </form>
     </div>
-    <div class="footer">
-
+    <div class="section">
+        <h1 id="section-title"></h1>
+        <div id="footer">
+            <p>2022 © Evan Goldsmith. All rights reserved.</p>
+        </div>
     </div>   
 </body>
 </html>

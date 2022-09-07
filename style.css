@@ -56,7 +56,7 @@ a {
 }
 
 .section-select:hover {
-    color: var(--primary);
+    color: black;
     transition: .1s ease;
 }
 
@@ -173,7 +173,7 @@ a {
 
 .card {
     height: 10rem;
-    max-width: 19rem;
+    max-width: 18rem;
     background-color: var(--alt);
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.64) 0px 3px 8px;
@@ -224,9 +224,64 @@ a {
     -webkit-transform: scale(1.1);
 }
 
-.gh {
-    width: 2rem;
-    height: 2rem;
+/* Contact Section */
+
+form {
+    color: var(--lgrey);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#contact-info, #contact-message, #contact-submit {
+    width: 80%;
+    max-width: 60rem;
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
+}
+
+textarea {
+    flex: 1;
+    background-color: var(--lgrey);
+    border-radius: 8px;
+    padding: 10px 0px 0px 10px;
+}
+
+#name, #email {
+    flex: 1;
+    padding-left: 10px;
+    background-color: var(--lgrey);
+    border: none;
+    border-radius: 8px;
+    height: 35px;
+}
+
+#Send, #Clear {
+    width: 8rem;
+    height: 3rem;
+    border: none;
+    border-radius: 4px;
+    border: solid black 1px;
+    background-color: var(--secondary);
+    transition: .3s ease;
+
+}
+
+#Send:hover, #Clear:hover {
+    border: solid var(--lgrey) 1px;
+    transition: .3s ease;
+}
+
+#footer {
+    margin-top: 25px;
+    color: var(--lgrey);
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
 }
 
 /* Mobile device view */
