@@ -186,13 +186,6 @@ a {
     transition: .3s ease;
 }
 
-.card:hover {
-    transition: .3s ease;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-    border-top: solid 3px var(--lgrey);
-}
-
 .card > div {
     text-align: center;
 }
@@ -216,12 +209,14 @@ a {
 .project-icon{
     width: 1.8rem;
     height: 1.8rem;
+    transition: 0.2s ease;
 }
 
 .project-icon:hover {
     transition: 0.2s ease;
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
+    filter: invert(100%);
 }
 
 /* Contact Section */
@@ -274,6 +269,7 @@ textarea {
 #Send:hover, #Clear:hover {
     border: solid var(--lgrey) 1px;
     transition: .3s ease;
+    cursor: pointer;
 }
 
 #footer {
