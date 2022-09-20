@@ -5,6 +5,10 @@
     --alt: #6366f1;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     padding: 0;
     margin: 0;
