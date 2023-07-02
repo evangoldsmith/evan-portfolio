@@ -3,19 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bdca4b23fb.js" crossorigin="anonymous"></script>
     <title>Evan Goldsmith</title>
 </head>
 <body>
-    <div class="header">
-        <ul class="options">
-            <li><a class="section-select" href="#">Home</a></li>
-            <li><a class="section-select" href="#About">About</a></li>
-            <li><a class="section-select" href="#Projects">Projects</a></li>
-            <li><a class="section-select" href="#Contact">Contact</a></li>
-        </ul>
-    </div>
+    <nav id="navbar-scroll" class="navbar">
+        <h1 class="logo">
+            <a href="#home"
+            ><img src="" alt="Evan's logo"
+            /></a>
+        </h1>
+        <div id="menu">
+            <ul class="nav-menu">
+                <li class="nav-items">
+                    <a href="#about" class="nav-link"
+                    ><i class="nav-icon fas fa-user"></i> ABOUT</a
+                    >
+                </li>
+                <li class="nav-items">
+                    <a href="#skills" class="nav-link"
+                    ><i class="nav-icon fas fa-cog"></i> SKILLS</a
+                    >
+                </li>
+                <li class="nav-items">
+                    <a href="#projects" class="nav-link"
+                    ><i class="nav-icon fas fa-code"></i> PROJECTS</a
+                    >
+                </li>
+                <li class="nav-items">
+                    <a href="#contact" class="nav-link"
+                    ><i class="nav-icon fas fa-address-book"></i> CONTACT</a
+                    >
+                </li>
+            </ul>
+            <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
     <div class="intro">
         <div class="message">
             <p>Hello, My Name is</p>
