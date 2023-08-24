@@ -1,14 +1,20 @@
 ---
 import image from '../images/portrait.jpg';
+import Social from '../components/Social.astro';
 ---
 
 <div class="text-white bg-neutral-800 mt-8 w-10/12 self-center rounded-md flex flex-wrap justify-evenly gap-8 mx-auto text-center py-8 px-4">
-    <div class="flex flex-col gap-4 w-2/4">
+    <div class="flex flex-col gap-5 w-2/4">
         <h1 class="text-5xl">Hey 👋 I'm Evan</h1>
         <p class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-2xl">CS Student • Software Engineer</p>
         <p class="text-lg">Full stack web developer with an interest in backend development, database systems, and data science. Use this site to check out my projects and learn more about my experience.</p>
-    </div>
-    <div>
-        <img class="rounded-md" src={image} width="250">
+        <div class="flex justify-evenly gap-2 flex-1 items-center ">
+            <Social platform="github" username="evangoldsmith" icon="fa-brands fa-square-github" />
+            <Social platform="linkedin" username="in/evan-goldsmith-339054233/" icon="fa-brands fa-linkedin" />
+            <Social platform="#" username="#" icon="fa-solid fa-square-envelope" />
+        </div>  
+    </div>  
+    <div class="self-center">
+        <img class="rounded-md shadow-lg" src={image} width="258">
     </div>
 </div>

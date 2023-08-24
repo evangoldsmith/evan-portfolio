@@ -2,19 +2,23 @@
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Skills from '../components/Skills.astro';
+import '../styles/base.css';
 import '@fontsource/dm-sans';
 ---
 
-<html lang="en">
+<html lang="en" class="">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<script src="https://kit.fontawesome.com/bdca4b23fb.js" crossorigin="anonymous"></script>
 		<title>Evan Goldsmith</title>
 	</head>
-	<body class="bg-neutral-900 flex flex-col">
+	<body class="bg-neutral-900 text-white">
 		<Header />
 		<Hero />
+		<Skills />
 	</body>
 </html>
