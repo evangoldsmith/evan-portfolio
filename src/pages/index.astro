@@ -1,10 +1,14 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Skills from '../components/Skills.astro';
+import ProjectPreview from '../components/ProjectPreview.astro';
+
 import '../styles/base.css';
-import '@fontsource/dm-sans';
+import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 ---
 
 <html lang="en" class="">
@@ -13,12 +17,13 @@ import '@fontsource/dm-sans';
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<script src="https://kit.fontawesome.com/bdca4b23fb.js" crossorigin="anonymous"></script>
 		<title>Evan Goldsmith</title>
+		<ViewTransitions />
 	</head>
 	<body class="bg-neutral-900 text-white">
 		<Header />
 		<Hero />
 		<Skills />
+		<ProjectPreview />
 	</body>
 </html>

@@ -7,5 +7,5 @@
 }
 
 .bp-grad-hover {
-    @apply hover:bg-gradient-to-r from-blue-500 to-purple-500 hover:bg-clip-text hover:text-transparent transform ease-in-out duration-100;
+    @apply transform ease-in-out duration-100 hover:bg-gradient-to-r from-blue-500 to-purple-500 hover:bg-clip-text hover:text-transparent;
 }
