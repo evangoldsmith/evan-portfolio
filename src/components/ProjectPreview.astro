@@ -1,13 +1,29 @@
 ---
+import Preview from './Preview.astro';
+import sLogo from '../images/scribeLogo.png';
+import nnLogo from '../images/nnLogo.png';
+import cgLogo from '../images/cgLogo.jpg';
+
 ---
 
 <div class="bg-neutral-800 mt-12 mb-6 w-10/12 mx-auto rounded-md py-8 px-4">
-    <div class="flex items-center gap-5">
-        <div class="bp-grad">   
-            <i class="fa-solid fa-folder-open fa-2xl text-transparent"></i>
-        </div>
+    <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-5">
+            <div class="bp-grad">   
+                <i class="fa-solid fa-folder-open fa-2xl text-transparent"></i>
+            </div>
 
-        <h1 class="text-4xl">Recent Projects</h1>
+            <h1 class="text-4xl">Recent Projects</h1>
+        </div>
+        <p class="text-lg">What I've been working on.</p>
+        <div class="flex flex-col gap-6">
+            <Preview title="Scribe" description="Use AI to generate notes for meeting recordings." path={sLogo} />
+            <Preview title="C-NeuralNet" description="A barebones feedforward neural network framework, built in plain C." path={nnLogo} />
+            <Preview title="CrossGen" description="A distinct crossword generator using wave function collapse." path={cgLogo} />
+        </div>
+        <div class="group flex mt-2 items-center gap-2">
+            <a class="text-lg" href="/projects/">View all projects
+            <i class="fa-solid fa-arrow-right transition duration-100 group-hover:translate-x-1"></i></a>
+        </div>
     </div>
-    
 </div>
