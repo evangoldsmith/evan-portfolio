@@ -3,9 +3,9 @@ import { ViewTransitions } from 'astro:transitions';
 
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import Skills from '../components/Skills.astro';
-import ProjectPreview from '../components/ProjectPreview.astro';
+import Hero from '../components/home/Hero.astro';
+import Skills from '../components/home/Skills.astro';
+import ProjectPreview from '../components/home/ProjectPreview.astro';
 
 import '../styles/base.css';
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
@@ -22,8 +22,10 @@ import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 	</head>
 	<body class="bg-neutral-900 text-zinc-200">
 		<Header />
-		<Hero />
-		<Skills />
-		<ProjectPreview />
+		<div transition:animate="fade">
+			<Hero />
+			<Skills />
+			<ProjectPreview />
+		</div>
 	</body>
 </html>

@@ -1,12 +1,13 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import image from '../images/portrait.jpg';
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { fade } from 'astro:transitions';
 
 import '../styles/base.css';
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
-import '@fontsource/dm-sans';
 ---
 
 <html lang="en">
@@ -17,11 +18,22 @@ import '@fontsource/dm-sans';
     <meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="/../../node_modules/@fortawesome/fontawesome-free/css/all.css">
     <title>About</title>
-    <!-- <ViewTransitions /> -->
+    <ViewTransitions />
   </head>
-  <body class="bg-neutral-900 text-white">
+  <body class="bg-neutral-900 text-zinc-200">
     <Header />
-    <h1 class="text-4xl font-bold m-8">About</h1>
-    <Footer />
+    <div transition:animate="fade">
+      <div>
+        <h1 class="text-4xl font-bold relative inline-block m-8">
+          About
+          <div class="inline-block h-1 bg-gradient-to-r from-blue-500 to-purple-500 mb-6 w-11/12 rounded-sm"></div>
+        </h1>
+      </div>
+      <div class="flex border">
+        
+
+      </div>
+      
+    </div>
   </body>
 </html>

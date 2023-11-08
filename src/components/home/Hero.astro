@@ -1,6 +1,6 @@
 ---
-import image from '../images/portrait.jpg';
-import Social from '../components/Social.astro';
+import image from '../../images/portrait.jpg';
+import Social from '../Social.astro';
 ---
 
 <div class="bg-neutral-800 mt-8 w-10/12 max-w-screen-xl self-center rounded-md flex flex-wrap justify-evenly gap-8 mx-auto text-center py-8 px-4 shadow-2xl">
@@ -15,6 +15,6 @@ import Social from '../components/Social.astro';
         </div>  
     </div>  
     <div class="self-center">
-        <img class="rounded-md shadow-lg" src={image} width="258">
+        <img class="rounded-md shadow-lg" src={image.src} width="258">
     </div>
 </div>
