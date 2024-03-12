@@ -1,25 +1,34 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import '@fontsource/dm-sans';
 const { frontmatter } = Astro.props;
+
+import '../styles/base.css';
+import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <script src="https://kit.fontawesome.com/bdca4b23fb.js" crossorigin="anonymous"></script>
-    <title>{frontmatter.title}</title>
-  </head>
-  <body >
+<html lang="en" class="">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="bg-neutral-900 text-zinc-200">
     <Header />
-    <h1>{frontmatter.title}</h1>
-    <p>{frontmatter.date}</p>
-    <p>{frontmatter.desc}</p>
-    <slot />
-    <Footer />
-  </body>
+		<div transition:animate="fade">
+      <h1 class="text-4xl font-bold relative inline-block ml-8 mt-8">
+        {frontmatter.title}
+        <div class="inline-block h-1 bg-gradient-to-r from-blue-500 to-purple-500 ml-0.5 mb-6 w-11/12 rounded-sm"></div>
+      </h1>
+      <div class="p-6 text-lg">
+        <slot />
+      </div>
+		</div>
+	</body>
 </html>
