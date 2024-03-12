@@ -1,8 +1,8 @@
 ---
-const { path, title, description, link } = Astro.props;
+const { path, title, alt, link } = Astro.props;
 ---
 
 <div class=" w-36 h-36 bg-neutral-800 rounded-md flex flex-col gap-2 items-center tracking-wider">
-    <a href={link} class="transform ease hover:scale-105"><img src={path.src} class="w-full h-full object-cover rounded-md"></a>
+    <a href={link} class="transform ease hover:scale-105"><img src={path.src} alt={alt}  class="w-full h-full object-cover rounded-md" /></a>
     <h1>{title}</h1>
 </div>
