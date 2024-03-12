@@ -1,6 +1,8 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-import image from '../images/portrait.jpg';
+import Education from "../components/about/Education.astro";
+import Experience from "../components/about/Experience.astro";
+import portrait from "../images/portrait.jpg";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -16,7 +18,6 @@ import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="/../../node_modules/@fortawesome/fontawesome-free/css/all.css">
     <title>About</title>
     <ViewTransitions />
   </head>
@@ -24,16 +25,32 @@ import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
     <Header />
     <div transition:animate="fade">
       <div>
-        <h1 class="text-4xl font-bold relative inline-block m-8">
+        <h1 class="text-4xl font-bold relative inline-block ml-8 mt-8">
           About
-          <div class="inline-block h-1 bg-gradient-to-r from-blue-500 to-purple-500 mb-6 w-11/12 rounded-sm"></div>
+          <div class="inline-block h-1 bg-gradient-to-r from-blue-500 to-purple-500 ml-0.5 mb-6 w-11/12 rounded-sm"></div>
         </h1>
       </div>
-      <div class="flex border">
-        
+      <div class="flex flex-col items-center justify-center gap-4  p-5">
+        <div class=" w-full p-8 rounded-md border-neutral-800 flex justify-evenly gap-6">
+          <img class="rounded-lg shadow-lg" src={portrait.src} width="450">
+          <Education/>
+          <Experience/>
+        </div>
+        <div class="p-4 flex gap-4 text-center justify-center text-xl tracking-wide">
+          <div class="flex flex-col justify-center gap-4 p-6 rounded-md shadow-lg bg-neutral-800">
+            <p>Welcome to my portfolio website! I'm Evan Goldsmith, a junior at the University of Central Florida, pursuing a Bachelor's degree in Computer Science.</p>
+            <p>I am a passionate software developer with a variety of interest from full stack development to data science and database systems. Throughout my academic journey, I have delved into various aspects computer science such as object oriented programming, data structures and algorithms, and machine learning.</p>
+          </div>
+          <div class="flex flex-col justify-center gap-4 p-6 rounded-md shadow-lg bg-neutral-800">
+            <p>Currently, I am working as a Software Developer with the TechRangers team at the UCF Center for Distributed Learning. In this role, I actively contribute to the development of innovative learning tools and applications for UCF's online content.</p>
+            <p> My expertise lies in using Python and JavaScript with popular frameworks like Django, Flask, and React to create seamless and interactive web interfaces. I also specialize in developing robust backend services and databases to support these applications. </p>
+          </div>
+
+        </div>
+      </div>
+      <div class="flex justify-evenly gap-4  p-5">
 
       </div>
-      
     </div>
   </body>
 </html>

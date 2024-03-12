@@ -1,0 +1,25 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import '@fontsource/dm-sans';
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <script src="https://kit.fontawesome.com/bdca4b23fb.js" crossorigin="anonymous"></script>
+    <title>{frontmatter.title}</title>
+  </head>
+  <body >
+    <Header />
+    <h1>{frontmatter.title}</h1>
+    <p>{frontmatter.date}</p>
+    <p>{frontmatter.desc}</p>
+    <slot />
+    <Footer />
+  </body>
+</html>

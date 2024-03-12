@@ -1,0 +1,24 @@
+---
+import ucfLogo from '../../images/ucf.svg';
+import Social from '../Social.astro';
+---
+
+<div class="w-72 flex flex-col items-center text-center rounded-md p-4 shadow-lg bg-neutral-800">
+    <i class="text-4xl fa-solid fa-graduation-cap bp-grad"></i>
+    <div>
+        <h1 class="text-2xl font-bold relative inline-block">
+          Education
+          <div class="inline-block h-1 bg-gradient-to-r from-blue-500 to-purple-500 ml-0.5 mb-6 w-11/12 rounded-sm"></div>
+        </h1>
+    </div>
+    <div class="mb-4 flex flex-col gap-2">
+        <h2 class="text-xl">University of Central Florida</h2>
+        <h2 class="text-xl">Orlando, Fl</h2>
+    </div>
+    <a href="https://ucf.edu/" class="mb-2 shadow-sm transform ease hover:scale-105"><img class="rounded-md shadow-lg" src={ucfLogo.src} height="2" width="190"></a>
+    <div class="mt-4">
+        <p>B.S in <i>Computer Science</i></p>
+        <p>Graduating Spring, 2025</p>
+    </div>
+    
+</div>
