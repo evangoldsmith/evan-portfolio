@@ -1,0 +1,55 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { Image } from 'astro:assets';
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import '@fontsource/dm-sans';
+const { frontmatter } = Astro.props;
+
+import '../styles/base.css';
+import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+---
+
+<html lang="en" class="">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/evan-portfolio/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="bg-neutral-900 text-zinc-200">
+    <Header />
+		<div transition:animate="fade">
+      <h1 class="text-5xl font-bold relative inline-block ml-8 mt-8">
+        {frontmatter.title}
+        <div class="inline-block h-1 bg-gradient-to-r from-blue-500 to-purple-500 ml-0.5 mb-4 w-11/12 rounded-sm"></div>
+      </h1>
+      <div class="flex md:flex-row sm:flex-col justify-center">
+        <article class="p-8 flex flex-col prose prose-invert lg:prose-l">
+			<slot />
+		</article>
+
+		<div  class="flex flex-col gap-8 items-center p-6 w-full">
+			<div transition:animate="slide">
+				<Image src={frontmatter.image} alt={frontmatter.alt} class="w-72 h-72 rounded-md shadow-lg"/>
+				<div class="flex mt-6 justify-evenly"> 
+					<a target=”_blank” href="/evan-portfolio/" class="bp-grad"><i class="text-zinc-200 bp-grad-hover fa-solid fa-code fa-2x transform hover:scale-125"></i></a>
+					<a target=”_blank” href="/evan-portfolio/" class="bp-grad"><i class="text-zinc-200 bp-grad-hover fa-solid fa-arrow-up-right-from-square fa-2x transform hover:scale-125"></i></a>
+				</div>
+			</div>
+
+			<div class="flex flex-col justify-center text-center">
+				<span class="text-2xl">Built With:</span>
+				<div class="mt-4 flex flex-wrap justify-center w-80 gap-4">
+					{frontmatter.tags.map((tag) => (
+						<span class="text-lg">{tag}</span>
+					))}
+				</div>
+			</div>
+	    </div>
+	   </div>
+	</body>
+</html>

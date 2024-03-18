@@ -1,0 +1,33 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/home/Hero.astro';
+import Skills from '../components/home/Skills.astro';
+import ProjectPreview from '../components/home/ProjectPreview.astro';
+
+import '../styles/base.css';
+import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+import '@fontsource/dm-sans';
+---
+
+<html lang="en" class="">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/evan-portfolio/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Evan Goldsmith</title>
+		<ViewTransitions />
+	</head>
+	<body class="bg-neutral-900 text-zinc-200">
+		<Header />
+		<div transition:animate="fade">
+			<Hero />
+			<Skills />
+			<ProjectPreview />
+		</div>
+	</body>
+</html>
