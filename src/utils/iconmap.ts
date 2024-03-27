@@ -70,6 +70,10 @@ const iconMap: { [key: string]: SkillInfo } = {
         icon: 'devicon-tailwindcss-plain',
         link: 'https://tailwindcss.com/'
     },
+    'Google Cloud': {
+        icon: 'devicon-googlecloud-plain',
+        link: 'https://cloud.google.com/'
+    },
 };
 
 export { iconMap };
