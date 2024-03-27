@@ -1,46 +1,18 @@
 ---
+import { iconMap } from '../../utils/iconmap.ts';
+
 const skills = [
-    {
-        name: 'Python',
-        icon: 'fa-brands fa-python',
-        link: 'https://www.python.org/',
-    },
-    {
-        name: 'JavaScript',
-        icon: 'fa-brands fa-js-square',
-        link: 'https://www.javascript.com/',
-    },
-    {
-        name: 'Java',
-        icon: 'fa-brands fa-java',
-        link: 'https://www.java.com/',
-    },
-    {
-        name: 'React',
-        icon: 'fa-brands fa-react',
-        link: 'https://reactjs.org/',
-    },
-    {
-        name: 'Docker',
-        icon: 'fa-brands fa-docker',
-        link: 'https://www.docker.com/',
-    },
-    {
-        name: 'Node.js',
-        icon: 'fa-brands fa-node-js',
-        link: 'https://nodejs.org/en/',
-    },
-    {
-        name: 'Tailwind CSS',
-        icon: 'fa-brands fa-css3-alt',
-        link: 'https://tailwindcss.com/',
-    },
-    {
-        name: 'Git',
-        icon: 'fa-brands fa-git-alt',
-        link: 'https://git-scm.com/',
-    }
-]
+    'Python',
+    'JavaScript',
+    'Java',
+    'React',
+    'Docker',
+    'Flask',
+    'Tailwind',
+    'Django',
+    'MySQL',
+    'MongoDB'
+];
 
 ---
 
@@ -56,7 +28,7 @@ const skills = [
         <p class="text-lg">Some technologies/languages I enjoy.</p>
         <div class="flex flex-wrap justify-center mt-4 gap-10">
             {skills.map((skill) => (
-                <a href={`${skill.link}`}><i class={`bp-grad-hover ${skill.icon} fa-4x`}></i></a>
+                <a href={`${iconMap[skill].link}`}><i class={`bp-grad-hover ${iconMap[skill].icon} fa-4x`}></i></a>
             ))} 
         </div>
     </div>

@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 import { Image } from 'astro:assets';
+import { iconMap } from '../utils/iconmap.ts';
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -9,6 +10,12 @@ const { frontmatter } = Astro.props;
 
 import '../styles/base.css';
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+import '../../node_modules/devicon/devicon.min.css';
+
+// Remove any tags lacking icon/link
+frontmatter.tags.filter(tag => iconMap[tag] === undefined).forEach(tag => {
+	console.warn(`No icon found for tag: ${tag}`);
+});
 ---
 
 <html lang="en" class="">
@@ -27,25 +34,31 @@ import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
         {frontmatter.title}
         <div class="inline-block h-1 bg-gradient-to-r from-blue-500 to-purple-500 ml-0.5 mb-4 w-11/12 rounded-sm"></div>
       </h1>
-      <div class="flex md:flex-row sm:flex-col justify-center">
+      <div class="flex md:flex-row flex-col justify-evenly">
+		
         <article class="p-8 flex flex-col prose dark:prose-invert lg:prose-l">
 			<slot />
 		</article>
 
-		<div  class="flex flex-col gap-8 items-center p-6 w-full">
+		<div  class="flex flex-col gap-8 items-center p-6 min-w-min md:order-last order-first">
 			<div transition:animate="slide">
 				<Image src={frontmatter.image} alt={frontmatter.alt} class="w-72 h-72 rounded-md shadow-lg"/>
 				<div class="flex mt-6 justify-evenly"> 
-					<a target=”_blank” href="/evan-portfolio/" class=""><i class="bp-grad-hover fa-solid fa-code fa-2x transform hover:scale-125"></i></a>
-					<a target=”_blank” href="/evan-portfolio/" class=""><i class="bp-grad-hover fa-solid fa-arrow-up-right-from-square fa-2x transform hover:scale-125"></i></a>
+					<a target=”_blank” href="/evan-portfolio/" ><i class="bp-grad-hover fa-solid fa-code fa-2x transform hover:scale-125"></i></a>
+					<a target=”_blank” href="/evan-portfolio/" ><i class="bp-grad-hover fa-solid fa-arrow-up-right-from-square fa-2x transform hover:scale-125"></i></a>
 				</div>
 			</div>
 
-			<div class="flex flex-col justify-center text-center">
+			<div class="p-4 flex flex-col justify-center text-center items-center">
 				<span class="text-2xl">Built With:</span>
-				<div class="mt-4 flex flex-wrap justify-center w-80 gap-4">
-					{frontmatter.tags.map((tag) => (
-						<span class="text-lg">{tag}</span>
+				<div class="mt-4 flex flex-wrap justify-center gap-4 md:w-72">
+					{frontmatter.tags.map((tag) => iconMap[tag] && (
+						<a href={iconMap[tag].link}>
+							<span class="group flex items-center gap-2 text-lg p-2 rounded-md">
+								{tag}
+								<i class={`group-bp-grad-hover ${iconMap[tag].icon}`}></i>
+							</span>
+						</a>
 					))}
 				</div>
 			</div>
