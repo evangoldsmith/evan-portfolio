@@ -3,7 +3,7 @@ title: 'BasketBrain'
 pubDate: 2024-01-01
 image: "../../images/scribeLogo.jpeg"
 alt: "Half brain half basketball"
-tags: ["Python", "Django", "Vue", "AWS", "Whisper", "GPT-4 API"]
+tags: ["Python", "Django", "MySQL", "AWS", "Whisper", "GPT-4 API"]
 ---
 
 ## **What is it?**
