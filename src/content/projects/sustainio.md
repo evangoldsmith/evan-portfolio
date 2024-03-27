@@ -3,7 +3,7 @@ title: 'Sustain.io'
 pubDate: 2023-10-20
 image: "../../images/sustain.jpeg"
 alt: "Graph with Leaf"
-tags: ["Javascript", "React", "Tailwind", "Express", "MongoDB", "Node.js", "BeautifulSoup"]
+tags: ["Javascript", "MongoDB", "Express", "React", "Node.js", "Tailwind"]
 ---
 
 ## **What is it?**
