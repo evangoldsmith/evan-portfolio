@@ -10,7 +10,7 @@ const iconMap: { [key: string]: SkillInfo } = {
         icon: 'fa-brands fa-python',
         link: 'https://www.python.org/'
     },
-    'JavaScript': {
+    'Javascript': {
         icon: 'fa-brands fa-js-square',
         link: 'https://www.javascript.com/'
     },
@@ -50,7 +50,7 @@ const iconMap: { [key: string]: SkillInfo } = {
         icon: 'devicon-vuejs-plain',
         link: 'https://vuejs.org/'
     },
-    'Express.js': {
+    'Express': {
         icon: 'devicon-express-original',
         link: 'https://expressjs.com/'
     },
@@ -73,6 +73,10 @@ const iconMap: { [key: string]: SkillInfo } = {
     'Google Cloud': {
         icon: 'devicon-googlecloud-plain',
         link: 'https://cloud.google.com/'
+    },
+    'AWS': {
+        icon: 'devicon-amazonwebservices-plain-wordmark',
+        link: 'https://aws.amazon.com/'
     },
 };
 

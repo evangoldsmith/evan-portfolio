@@ -1,19 +1,12 @@
 ---
 import Project from './Project.astro';
-import scribeLogo from '../../images/scribeLogo.jpeg';
-import sustainLogo from '../../images/sustain.jpeg';
-import cnnLogo from '../../images/nnLogo.png';
-import cgLogo from '../../images/cgLogo.svg';
-import bbLogo from '../../images/basketbrain.svg';
+import { getCollection } from 'astro:content';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
 
-// TODO: Finish adding alt tags to project components
+const blogEntries = await getCollection('projects');
 ---
-
-
-<div class="p-4 flex justify-evenly">
-    <Project title="Sustain.io" link="/evan-portfolio/projects/sustainio" alt="" path={sustainLogo}/>
-    <Project title="Scribe" link="/evan-portfolio/projects/scribe" path={scribeLogo}/>
-    <Project title="C-NeuralNet" link="/evan-portfolio/projects" path={cnnLogo}/>
-    <Project title="CrossGen" link="/evan-portfolio/projects" path={cgLogo}/>
-    <Project title="BasketBrain" link="/evan-portfolio/projects/basketbrain" path={bbLogo}/>
+<div class="p-4 flex gap-y-32 flex-wrap justify-evenly">
+    {blogEntries.map((project) => (
+        <Project title={project.data.title} link={`/evan-portfolio/projects/${project.slug}`} path={project.data.image} alt={project.data.alt}/>
+    ))}
 </div>
