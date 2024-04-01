@@ -1,6 +1,7 @@
 ---
 title: 'Sustain.io'
-pubDate: 2023-10-20
+repoLink: 'https://github.com/taheralfayad/shell-hacks/tree/main'
+liveLink: 'https://devpost.com/software/sustain-io?ref_content=user-portfolio&ref_feature=in_progress'
 image: "../../images/sustain.jpeg"
 alt: "Graph with Leaf"
 tags: ["Javascript", "MongoDB", "Express", "React", "Node.js", "Tailwind"]

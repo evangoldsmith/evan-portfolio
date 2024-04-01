@@ -6,7 +6,8 @@ const projectsCollection = defineCollection({
     type: 'content',
     schema: ({ image }) => z.object({
       title: z.string(),
-      pubDate: z.date(),
+      repoLink: z.string(),
+      liveLink: z.string(),
       image: image(),
       alt: z.string(),
       tags: z.array(z.string())

@@ -1,6 +1,8 @@
 ---
 title: 'BasketBrain'
 pubDate: 2024-01-01
+repoLink: 'https://github.com/evangoldsmith/nba-regression/'
+liveLink: 'https://twitter.com/BasketBrainBot'
 image: "../../images/basketbrain.svg"
 alt: "Half brain half basketball"
 tags: ["Python", "Google Cloud"]
