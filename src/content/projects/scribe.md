@@ -1,6 +1,7 @@
 ---
 title: 'Scribe'
-pubDate: 2022-07-01
+repoLink: ''
+liveLink: ''
 image: "../../images/scribeLogo.jpeg"
 alt: "Minimalist Blue Quill"
 tags: ["Python", "Django", "MySQL", "AWS", "Vue.js", "GPT-4 API"]
