@@ -7,6 +7,6 @@ const blogEntries = await getCollection('projects');
 ---
 <div class="p-4 flex gap-y-32 flex-wrap justify-evenly">
     {blogEntries.map((project) => (
-        <Project title={project.data.title} link={`/evan-portfolio/projects/${project.slug}`} path={project.data.image} alt={project.data.alt}/>
+        <Project title={project.data.title} link={`/projects/${project.slug}`} path={project.data.image} alt={project.data.alt}/>
     ))}
 </div>
