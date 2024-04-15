@@ -1,0 +1,45 @@
+---
+---
+<div>
+    <li class="flex items-center justify-center bp-grad-hover transform ease "><button class="theme-toggle px-3 py-2  w-14 hover:border-black dark:hover:border-white border-gray-500 rounded-md"><i class="fa-solid fa-lg"></i></button></li>
+
+    <script is:inline>
+        function applyTheme() {
+            const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            if (storedTheme === "light") {
+                document.documentElement.classList.remove("dark");
+                // add sun icon
+                document.querySelectorAll(".theme-toggle i").forEach(icon => {
+                    icon.classList.add("fa-moon");
+                    icon.classList.remove("fa-sun");
+                });
+            } else {
+                document.documentElement.classList.add("dark");
+                // add moon icon
+                document.querySelectorAll(".theme-toggle i").forEach(icon => {
+                    icon.classList.add("fa-sun");
+                    icon.classList.remove("fa-moon");
+                });
+            }
+        }
+
+        function initThemeToggle() {
+            applyTheme();
+
+            document.addEventListener('astro:page-load', () => {
+                applyTheme();
+                const themeToggles = document.querySelectorAll(".theme-toggle");
+                themeToggles.forEach(toggle => {
+                    toggle.addEventListener("click", () => {
+                        console.log("clicked");
+                        const currentTheme = document.documentElement.classList.toggle("dark") ? "dark" : "light";
+                        localStorage.setItem("theme", currentTheme);
+                        applyTheme();
+                    });
+                });
+            });
+        }
+
+        initThemeToggle();
+    </script>
+</div>
