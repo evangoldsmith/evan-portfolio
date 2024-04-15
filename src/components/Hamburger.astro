@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from './ThemeToggle.astro'; 
+
 export interface Heading {
     name: string;
     link: string;
@@ -17,12 +19,16 @@ const { headings } = Astro.props;
             <i class="fa-solid fa-bars fa-2x bp-grad-hover"></i>
         </button>
     </div>
-    <div class="side-bar hidden md:hidden fixed top-0 left-auto right-0 bottom-0 z-50 bg-black p-8 opacity-90 max-w-min justify-self-end justify-end flex-shrink-0 text-white">
+    <div class="side-bar hidden md:hidden rounded-l-lg fixed top-0 left-auto right-0 bottom-0 z-50 bg-black p-8 opacity-90 max-w-min justify-self-end justify-end flex-shrink-0 text-white">
         <ul class="font-medium max-w-min h-min flex flex-col gap-2 items-end p-4 md:p-0 mt-4 border border-gray-100 rounded-lg dark:border-gray-700 opacity-100">
             <button class="hamburger_close"><i class="fa-solid fa-x bp-grad-hover mb-2"></i></button>
             {headings.map((heading) => (
                 <a href={`${heading.link}`} class="bp-grad-hover"><li class="flex gap-4 items-center">{heading.name}<i class={`fa-solid ${heading.icon} fa-small`}></i></li></a>
             ))}
+            <!-- <i class="fa-solid fa-moon mt-4 mb-2 fa-lg bp-grad-hover" id="theme-toggle"></i> -->
+            <button class="theme-toggle bp-grad-hover"><li class="flex gap-4 items-center">Theme<i class="fa-solid fa-moon fa-lg"></i></li></button>
+             <!-- <ThemeToggle /> -->
+
         </ul>
     </div>
     <script>

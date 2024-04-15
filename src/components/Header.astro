@@ -1,5 +1,6 @@
 ---
 import Hamburger from './Hamburger.astro';
+import ThemeToggle from './ThemeToggle.astro';
 
 const headings = [
     {
@@ -33,10 +34,11 @@ const headings = [
         </div>
 
         <div class="hidden md:block md:w-auto" >
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:gap-4 md:mt-0 md:border-0 dark:border-gray-700">
                 {headings.map((heading) => (
                     <li class="flex items-center bp-grad-hover transform ease"><i class={`fa-solid ${heading.icon} fa-small`}></i><a href={`${heading.link}`} class="block py-2 pl-3 pr-4 rounded border-0 p-0" aria-current="page">{heading.name}</a></li>
                 ))}
+                <ThemeToggle />
             </ul>
         </div>
         
