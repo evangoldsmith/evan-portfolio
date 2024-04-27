@@ -78,6 +78,10 @@ const iconMap: { [key: string]: SkillInfo } = {
         icon: 'devicon-amazonwebservices-plain-wordmark',
         link: 'https://aws.amazon.com/'
     },
+    'Astro': {
+        icon: 'devicon-astro-plain',
+        link: 'https://astro.build/'
+    },
 };
 
 export { iconMap };
