@@ -15,7 +15,7 @@ BasketBrain is a logistic regression model built to predict the outcome of NBA m
 
 ## **How does it work?**
 
-BasketBrain is trained on data collected from a custom webscraper. By grabbing statistics from ()[TeamRankings.com] and ()[BasketBallReference.com], the scraper can create historical training datasets as well as grab current matchups and statistics. Using the SciKitLearn Python libary, a logistic regression model can be created, analyzed, and have it's model weights saved. The file containing the model is uploaded to Google Cloud to be used by the serverless function running the prediction and sending the tweet each morning.
+BasketBrain is trained on data collected from a custom webscraper. By grabbing statistics from [TeamRankings.com](https://TeamRankings.com) and [BasketBallReference.com](https://BasketBallReference.com), the scraper can create historical training datasets as well as grab current matchups and statistics. Using the SciKitLearn Python libary, a logistic regression model can be created, analyzed, and have it's model weights saved. The file containing the model is uploaded to Google Cloud to be used by the serverless function running the prediction and sending the tweet each morning.
 
 ## **How can I use it?**
 
