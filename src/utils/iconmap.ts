@@ -82,6 +82,14 @@ const iconMap: { [key: string]: SkillInfo } = {
         icon: 'devicon-astro-plain',
         link: 'https://astro.build/'
     },
+    'Go': {
+        icon: 'devicon-go-plain',
+        link: 'https://go.dev/'
+    },
+    'Terraform': {
+        icon: 'devicon-terraform-plain',
+        link: 'https://www.terraform.io/'
+    },
 };
 
 export { iconMap };
