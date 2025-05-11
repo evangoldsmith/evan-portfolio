@@ -1,7 +1,7 @@
 ---
 title: 'Portfolio'
 repoLink: 'https://github.com/evangoldsmith/evan-portfolio'
-liveLink: 'https://evan.gold'
+liveLink: 'https://evangoldsmith.dev'
 image: "../../images/astro.svg"
 alt: "Portfolio site Logo"
 tags: ["Typescript", "Astro", "Tailwind", "Node.js"]

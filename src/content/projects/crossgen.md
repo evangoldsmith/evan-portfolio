@@ -1,7 +1,7 @@
 ---
 title: 'CrossGen'
 repoLink: 'https://github.com/evangoldsmith/crossgen'
-liveLink: 'https://evan.gold'
+liveLink: 'https://evangoldsmith.dev'
 image: "../../images/crossgen.svg"
 alt: "Portfolio site Logo"
 tags: ["Python", "React", "Javascript", "Flask"]
