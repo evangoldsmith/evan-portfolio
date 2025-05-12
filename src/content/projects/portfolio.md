@@ -2,7 +2,7 @@
 title: 'Portfolio'
 repoLink: 'https://github.com/evangoldsmith/evan-portfolio'
 liveLink: 'https://evangoldsmith.dev'
-image: "../../images/astro.svg"
+image: "../../images/logo.jpg"
 alt: "Portfolio site Logo"
 tags: ["Typescript", "Astro", "Tailwind", "Node.js"]
 ---

@@ -2,7 +2,7 @@
 const { path, title, alt, link } = Astro.props;
 ---
 
-<div class=" w-36 h-36  shadow-md rounded-md flex flex-col gap-2 items-center tracking-wider hover:scale-105">
-    <a href={link} class="transform ease"><img src={path.src} alt={alt}  class=" object-cover rounded-md w-36 h-36" /></a>
+<div class=" w-48 h-48 flex flex-col gap-2 items-center tracking-wider hover:scale-105">
+    <a href={link} class="bg-neutral-100 rounded-md transform ease w-[158px] h-[158px] flex justify-center items-center"><img height="100" width="100" src={path.src} alt={alt}  class=" object-cover rounded-md"/></a>
     <h1 class="text-center">{title}</h1>
 </div>

@@ -42,7 +42,7 @@ frontmatter.tags.filter(tag => iconMap[tag] === undefined).forEach(tag => {
 
 		<div  class="flex flex-col gap-8 items-center p-6 min-w-min md:order-last order-first">
 			<div transition:animate="slide">
-				<Image src={frontmatter.image} alt={frontmatter.alt} class="w-72 h-72 rounded-md shadow-lg"/>
+				<Image src={frontmatter.image} alt={frontmatter.alt} class="w-72 h-72 rounded-md shadow-lg bg-neutral-100"/>
 				<div class="flex mt-6 justify-evenly"> 
 					<a target=”_blank” href={frontmatter.repoLink} class="repoLink"><i class="bp-grad-hover fa-solid fa-code fa-2x transform hover:scale-125"></i></a>
 					<a target=”_blank” href={frontmatter.liveLink} class="liveLink"><i class="bp-grad-hover fa-solid fa-arrow-up-right-from-square fa-2x transform hover:scale-125"></i></a>
