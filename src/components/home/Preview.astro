@@ -4,7 +4,7 @@ const { path, title, description, link } = Astro.props;
 
 ---
 <a class="group flex border border-gray-500 rounded-md p-4 gap-6 items-center dark:hover:border-white hover:border-neutral-300 max-w-full " href={link}>
-    <span class="rounded-md shadow-lg w-[100px] h-[100px] flex justify-center bg-slate-100">
+    <span class="rounded-md shadow-lg w-[100px] h-[100px] min-w-[100px] flex justify-center bg-slate-100">
       <img class="rounded-md shadow-lg"
           src={path.src}
           width="100"
