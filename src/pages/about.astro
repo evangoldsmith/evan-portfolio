@@ -2,7 +2,8 @@
 import { ViewTransitions } from 'astro:transitions';
 import Education from "../components/about/Education.astro";
 import Experience from "../components/about/Experience.astro";
-import portrait from "../images/portrait.jpg";
+import portrait from "../images/portrait2.png";
+
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -32,29 +33,18 @@ import '@fontsource/dm-sans';
           <div class="inline-block h-1 bg-gradient-to-r from-blue-500 to-purple-500 ml-0.5 mb-6 w-11/12 rounded-sm"></div>
         </h1>
       </div>
-      <div class="flex flex-col items-center justify-center gap-4 p-5">
-        <div class="w-full p-4 rounded-md flex flex-wrap justify-center gap-y-6">
-          <img class="rounded-lg shadow-lg" src={portrait.src} width="450">
-          <div class="md:flex items-start justify-around gap-y-4 p-2 w-max flex-1">
-            <Experience/>
-            <Education/>
-          </div>
-        </div>
-        <div class="p-4 flex md:flex-nowrap flex-wrap gap-4 text-center justify-center text-xl w-full">
-          <div class="flex flex-col justify-center gap-4 p-8 rounded-md shadow-lg dark:bg-neutral-800 bg-neutral-100 md:w-10/12">
-            <p>Welcome to my portfolio website! I'm Evan Goldsmith, a senior at the University of Central Florida, pursuing a Bachelor's degree in Computer Science.</p>
-            <p>I am a passionate software developer with a variety of interest from full stack development to distributed sytems and cloud infrastructure. Throughout my academic journey, I have delved into various aspects computer science such as object oriented programming, data structures and algorithms, and machine learning.</p>
-          </div>
-          <div class="flex flex-col justify-center gap-4 p-8 rounded-md shadow-lg dark:bg-neutral-800 bg-neutral-100 md:w-10/12">
-            <p>Currently, I am working as a Software Developer with the TechRangers team at the UCF Center for Distributed Learning. In this role, I actively contribute to the development of innovative learning tools and applications for UCF's online content.</p>
-            <p> My expertise lies in using Python and JavaScript with popular frameworks like Django, Flask, and React to create seamless and interactive web interfaces. I also specialize in developing robust backend services and databases to support these applications. </p>
-          </div>
 
-        </div>
-      </div>
-      <div class="flex justify-evenly gap-4  p-5">
-
-      </div>
+    <div class="dark:bg-neutral-800 bg-neutral-100 mt-8 w-10/12 max-w-screen-xl self-center rounded-md flex flex-wrap justify-evenly gap-8 mx-auto text-center py-8 px-4 shadow-2xl">
+      <img class="rounded-md shadow-lg w-[238px] h-[358px]" src={portrait.src} height="358" width="238">
+      <div class="flex flex-col gap-5 md:w-2/4 sm:w-full text-xl justify-center">
+        <p>Welcome to my portfolio website! I'm Evan, a recent computer science graduate from the University of Central Florida.</p>
+        <p>I have a wide variety of interests in computer science, including machine learning, data science, distributed systems and more! Outside of programming, I love playing and watching basketball, as well as making music. Feel free to look around this portfolio site to learn more about my projects and experience.</p>
+      </div>  
     </div>
+
+    <Education />
+
+    <Experience />
+
   </body>
 </html>
